@@ -111,7 +111,7 @@ class VectorPolicyRetriever:
         digest = hashlib.sha256("\n".join(doc.page_content for doc in self.documents).encode()).hexdigest()[:16]
         self.store = Chroma(
             collection_name=f"university_support_{digest}",
-            embedding_function=OllamaEmbeddings(model="nomic-embed-text", base_url="http://localhost:11434", keep_alive="30m"),
+            embedding_function=OllamaEmbeddings(model="nomic-embed-text", base_url="http://localhost:11434", keep_alive=1800),
             persist_directory=persist_directory,
         )
         existing = set(self.store.get()["ids"])
