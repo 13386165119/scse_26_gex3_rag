@@ -1,0 +1,8 @@
+# Python 3.10+ recommended. Install in a virtual environment.
+langchain-core
+langchain-chroma
+langchain-ollama
+transformers>=4.51
+torch
+accelerate
+safetensors

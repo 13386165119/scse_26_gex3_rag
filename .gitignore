@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+.chroma/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+.env
